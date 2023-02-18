@@ -10,7 +10,7 @@ def predict(estate_params=[2, 64.56, 18, 126100]):
     #   current price]
 
     test_series = pd.Series(estate_params)
-    forecaster = load("forecaster.py")
+    forecaster = load("app/forecaster.py")
 
     predictions = forecaster.predict(steps=50, last_window=test_series)
     # return float value
