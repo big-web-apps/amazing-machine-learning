@@ -17,6 +17,6 @@ app.add_middleware(
 )
 
 
-@app.get("/")
+@app.get("/coefficient/")
 async def root(rooms: int, square: float, floor: int, price: int):
     return {'coefficient': predict([rooms, square, floor, price])}
